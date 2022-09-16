@@ -1,4 +1,4 @@
-import { swapArrayItems } from '../utils'
+const { swapArrayItems } = require('../utils')
 
 /*
  * Quick sort: best case : n log(n) , average case: n log(n) , worst case: n ^ 2
@@ -10,10 +10,11 @@ import { swapArrayItems } from '../utils'
  *
  */
 
+// eslint-disable-next-line no-unused-vars
 const findPivotWithFirstIdx = (array, start, end) => {
-  let pivot = array[start]
-  let i = start + 1, // start at one element after the pivot
-    j = end // last index of the array i.e array.length - 1
+  const pivot = array[start]
+  let i = start + 1 // start at one element after the pivot
+  let j = end // last index of the array i.e array.length - 1
 
   while (i < j) {
     // increment i unless you find array[i] >= pivot
@@ -69,7 +70,7 @@ const findPivotWithLastIdx = (array = [], start, end) => {
  * @returns sorted array
  */
 
-export const quicksort = (array = [], start, end) => {
+const quicksort = (array = [], start, end) => {
   if (!Array.isArray(array)) {
     throw new Error('Please provide an array')
   }
@@ -85,3 +86,8 @@ export const quicksort = (array = [], start, end) => {
 
   return array
 }
+
+const a = [8, 6, 2, 1, 0, 12, -1]
+
+const sorted = quicksort(a, 0, a.length - 1)
+console.log(sorted) // [-1,1,2,6,8,12]

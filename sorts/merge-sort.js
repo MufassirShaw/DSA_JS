@@ -7,7 +7,7 @@
  */
 
 const mergeLists = (a = [], b = []) => {
-  let final = []
+  const final = []
   while (a.length && b.length) {
     if (a[0] < b[0]) {
       final.push(a.shift())
@@ -20,7 +20,7 @@ const mergeLists = (a = [], b = []) => {
 }
 
 const mergeSort = (arr = []) => {
-  //*0 ⛔ stop condition
+  //* 0 ⛔ stop condition
   if (arr.length <= 2) {
     return arr
   }
@@ -30,16 +30,18 @@ const mergeSort = (arr = []) => {
   const left = arr.slice(0, mid)
   const right = arr.slice(mid, arr.length)
 
-  //*2 do the same for each parts recurrsively
+  //* 2 do the same for each parts recurrsively
   const a = mergeSort(left)
   const b = mergeSort(right)
 
-  //*3 merge and sort the parts
+  //* 3 merge and sort the parts
   const sorted = mergeLists(a, b)
 
-  //*4 return the sorted array
+  //* 4 return the sorted array
   return sorted
 }
 
-let unSortedArray = [4, 8, 1, 2, 6, 10, 0, -1]
-mergeSort(unSortedArray)
+const unSortedArray = [4, 8, 1, 2, 6, 10, 0, -1]
+const sorted = mergeSort(unSortedArray)
+
+console.log(sorted)

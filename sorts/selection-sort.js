@@ -1,4 +1,4 @@
-import { swapArrayItems } from '../utils'
+const { swapArrayItems } = require('../utils')
 
 //* Selection Sort
 //* best case: O(n ^ 2) , average case: O(n ^ 2) , worst case: O(n ^ 2)
