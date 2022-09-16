@@ -4,7 +4,7 @@ const { swapArrayItems } = require('../utils')
 //* best case: O(n ^ 2) , average case: O(n ^ 2) , worst case: O(n ^ 2)
 
 /*
- * Swap the current item with a smaller item
+ * Find the smallest element in the array and place it at the begining
  * repeat this arr.length times for every item
  */
 
@@ -13,15 +13,15 @@ const selectionSort = (arr = []) => {
     throw new Error('Argument should be an array')
   }
 
-  let maxIdx
   for (let i = 0; i < arr.length; i++) {
-    maxIdx = i
-    for (let j = 0; j < arr.length; j++) {
-      const element = arr[j]
-      if (element > arr[maxIdx]) {
-        maxIdx = j
+    let nextMin = i
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[nextMin]) {
+        nextMin = j
       }
-      swapArrayItems(arr, maxIdx, i)
+    }
+    if (i !== nextMin) {
+      swapArrayItems(arr, nextMin, i)
     }
   }
   return arr
