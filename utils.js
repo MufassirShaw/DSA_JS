@@ -1,5 +1,9 @@
-export const swapArrayItems = (arr, i, j) => {
-  let temp = arr[i]
+const swapArrayItems = (arr, i, j) => {
+  const temp = arr[i]
   arr[i] = arr[j]
   arr[j] = temp
+}
+
+module.exports = {
+  swapArrayItems
 }
