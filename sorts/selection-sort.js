@@ -13,15 +13,15 @@ const selectionSort = (arr = []) => {
     throw new Error('Argument should be an array')
   }
 
-  let minIdx
+  let maxIdx
   for (let i = 0; i < arr.length; i++) {
-    minIdx = i
+    maxIdx = i
     for (let j = 0; j < arr.length; j++) {
       const element = arr[j]
-      if (element > arr[minIdx]) {
-        minIdx = j
+      if (element > arr[maxIdx]) {
+        maxIdx = j
       }
-      swapArrayItems(arr, minIdx, i)
+      swapArrayItems(arr, maxIdx, i)
     }
   }
   return arr
