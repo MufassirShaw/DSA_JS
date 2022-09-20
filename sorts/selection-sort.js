@@ -4,7 +4,7 @@ const { swapArrayItems } = require('../utils')
 //* best case: O(n ^ 2) , average case: O(n ^ 2) , worst case: O(n ^ 2)
 
 /*
- * Find the smallest element in the array and place it at the begining
+ * Find the smallest element in the array and place it at the begining of the unsorted part of array
  * repeat this arr.length times for every item
  */
 

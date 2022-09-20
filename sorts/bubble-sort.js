@@ -1,7 +1,7 @@
 const { swapArrayItems } = require('../utils')
 
 //* Bubble Sort
-//* best case: O(n ^ 2) , average case: O(n ^ 2) , worst case: O(n ^ 2)
+//* best case: O(n) , average case: O(n ^ 2) , worst case: O(n ^ 2)
 
 /*
  * check if the current element is greater than the next element and if so, swap them
