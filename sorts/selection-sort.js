@@ -6,6 +6,14 @@ const { swapArrayItems } = require('../utils')
 /*
  * Find the smallest element in the array and place it at the begining of the unsorted part of array
  * repeat this arr.length times for every item
+ * [8*,6,2,1]
+ * [8*,6,2,1^]
+ * [1,6*,2,8]
+ * [1,6*,2^,8]
+ * [1,2,6*,8]
+ * [1,2,6*^,8]
+ * [1,2,6,8*]
+ * [1,2,6,8]
  */
 
 const selectionSort = (arr = []) => {
